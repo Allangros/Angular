@@ -1,0 +1,15 @@
+<!-- <input type="text" [(ngModel)]="username" (keyup.enter)="search()">
+<button (click)="search()" *ngIf="username">Chercher</button>
+<ul>
+    <li *ngFor="let name of names ; let i =index ; let isEven = even"
+    [ngClass]="{red: isEven, bold: isEven}">
+        {{ i }} - {{isEven}} - {{name}}
+    </li>
+</ul> -->
+
+<ul>
+    <li *ngFor="let name of names | startname ; let i =index ; let isEven = even"
+    [ngStyle]="{color: 'red', 'font-weight':'bold'}">
+        {{ i }} - {{isEven}} - {{name}}
+    </li>
+</ul>
