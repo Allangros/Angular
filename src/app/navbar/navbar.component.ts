@@ -3,13 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     //le selector correspond à la balise html perso
     selector: 'app-navbar',
-    template: `
-    <p>{{title | uppercase}}</p> 
-    <p>{{ price | currency:'EUR'}}
-    {{'message' | plurial}}
-    <app-search [username]="name" (onSearch)="changeUsername($event)"></app-search>
-
-    `
+    templateUrl: 'navbar.component.html'
 })
 export class NavbarComponent {
     title: string='Mon App de formation'

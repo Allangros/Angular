@@ -1,0 +1,9 @@
+<p>{{title | uppercase}}</p> 
+<p>{{ price | currency:'EUR'}}
+{{'message' | plurial}}
+<app-search [username]="name" (onSearch)="changeUsername($event)"></app-search>
+<select>
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+</select>
