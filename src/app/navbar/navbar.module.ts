@@ -3,6 +3,7 @@ import {FormsModule} from '@angular/forms'
 import {CommonModule} from '@angular/common'
 import {NavbarComponent} from './navbar.component'
 import {SearchComponent} from './search/search.component'
+import { PlurialPipe} from '../shared/pipes/plurial.pipes'
 
 @NgModule({
     //composant dans le module, ici composants privés du module

@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
     template: `
     <p>{{title | uppercase}}</p> 
     <p>{{ price | currency:'EUR'}}
+    {{'message' | plurial}}
     <app-search [username]="name" (onSearch)="changeUsername($event)"></app-search>
+
     `
 })
 export class NavbarComponent {
