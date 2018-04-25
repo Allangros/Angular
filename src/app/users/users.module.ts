@@ -4,13 +4,13 @@ import {CommonModule} from '@angular/common'
 import {UsersComponent} from './users.component'
 import {UserCardComponent} from './user-card/user-card.component'
 import {MatListModule} from '@angular/material'
-import { mailPipe } from '../shared/pipes/mail.pipes'
+import { MailPipe } from '../shared/pipes/mail.pipes'
 
 @NgModule({
     //composant dans le module, ici composants privés du module
-    declarations: [UsersComponent,UserCardComponent,mailPipe,FormsModule],
+    declarations: [UsersComponent,UserCardComponent,MailPipe],
     //dépendances du module
-    imports: [MatListModule,CommonModule],
+    imports: [MatListModule,CommonModule,FormsModule],
     //pas de boostrap car ce n'est plus le module racine, ici composant public
     exports: [UsersComponent]
 })
