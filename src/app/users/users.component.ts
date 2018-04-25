@@ -4,11 +4,10 @@ import { Component } from '@angular/core';
 @Component({
     //le selector correspond à la balise html perso
     selector: 'userslist',
-    template: `
-        <user-card *ngFor="let user of users" [user]="user"></user-card>
-    `
+    templateUrl: 'users.components.html'
 })
 export class UsersComponent {
+    ext: string[] = ['tv', 'biz', 'io', 'me']
     users: any =     [
         {
           "id": 1,
