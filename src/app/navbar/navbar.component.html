@@ -1,9 +1,19 @@
 <p>{{title | uppercase}}</p> 
 <p>{{ price | currency:'EUR'}}
-{{'message' | plurial}}
-<app-search [username]="name" (onSearch)="changeUsername($event)"></app-search>
-<select>
+
+{{'message' | plurial:nbSelected}}
+<select [(ngModel)] = "nbSelected">
     <option>0</option>
     <option>1</option>
     <option>2</option>
 </select>
+
+<button>{{'' | local:lan}}</button>
+
+<select [(ngModel)] = "lan">
+    <option>fr</option>
+    <option>eng</option>
+</select>
+
+<app-search [username]="name" (onSearch)="changeUsername($event)"></app-search>
+

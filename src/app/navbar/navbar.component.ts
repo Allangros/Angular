@@ -9,6 +9,8 @@ export class NavbarComponent {
     title: string='Mon App de formation'
     name: string ='Anna'
     price: number =15
+    nbSelected: number = 0
+    lan: string = 'fr'
     changeUsername(username:string) {
         console.log(username)
     }

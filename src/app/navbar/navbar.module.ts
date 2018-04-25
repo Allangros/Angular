@@ -4,10 +4,11 @@ import {CommonModule} from '@angular/common'
 import {NavbarComponent} from './navbar.component'
 import {SearchComponent} from './search/search.component'
 import { PlurialPipe} from '../shared/pipes/plurial.pipes'
+import { LocalPipe } from '../shared/pipes/local.pipes'
 
 @NgModule({
     //composant dans le module, ici composants privés du module
-    declarations: [NavbarComponent,SearchComponent,PlurialPipe],
+    declarations: [NavbarComponent,SearchComponent,PlurialPipe,LocalPipe],
     //dépendances du module
     imports: [FormsModule,CommonModule],
     //pas de boostrap car ce n'est plus le module racine, ici composant public
