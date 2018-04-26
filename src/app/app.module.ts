@@ -1,10 +1,9 @@
 import {NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 import {AppComponent} from './app.component'
-import {NavbarModule} from './navbar/navbar.module'
-import { UsersModule } from './users/users.module'
 import {LoginModule} from './login/login.module'
 import {AppRouter} from './app.router'
+import {LayoutModule} from './layout/layout.module'
 
 @NgModule({
     //composant dans le module
@@ -12,10 +11,9 @@ import {AppRouter} from './app.router'
     //dépendances du module
     imports: [
         BrowserModule, 
-        NavbarModule, 
-        UsersModule,
         LoginModule,
-        AppRouter
+        AppRouter,
+        LayoutModule
     ],
     //sur quel composant démarrer
     bootstrap: [AppComponent]

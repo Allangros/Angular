@@ -4,7 +4,7 @@ import {CommonModule} from '@angular/common'
 import {UsersComponent} from './users.component'
 import {UserCardComponent} from './user-card/user-card.component'
 import {MatListModule} from '@angular/material'
-import {MailPipe} from '../shared/pipes/mail.pipes'
+import {MailPipe} from '../../shared/pipes/mail.pipes'
 
 @NgModule({
     //composant dans le module, ici composants privés du module
