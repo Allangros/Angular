@@ -3,7 +3,8 @@ import { registerLocaleData } from '@angular/common';
 
 
 @Pipe({
-    name: 'mailPipe'
+    name: 'mailPipe',
+    pure: false
 })
 export class MailPipe implements PipeTransform{
     transform(users: Array<any>, ext:string ){

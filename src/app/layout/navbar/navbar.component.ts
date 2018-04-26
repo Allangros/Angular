@@ -12,7 +12,6 @@ export class NavbarComponent implements OnInit{
     name: string ='Anna'
     price: number =15
     nbSelected: number = 0
-    lan: string = 'fr'
     version: string =''
     //appModel:AppService
 

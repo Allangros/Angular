@@ -4,7 +4,6 @@ import {CommonModule} from '@angular/common'
 import {NavbarComponent} from './navbar.component'
 import {SearchComponent} from './search/search.component'
 import { PlurialPipe} from '../../shared/pipes/plurial.pipes'
-import { LocalPipe } from '../../shared/pipes/local.pipes'
 import { StartNamePipe } from '../../shared/pipes/startname.pipes'
 import {AppRouter} from '../../app.router'
 
@@ -14,7 +13,6 @@ import {AppRouter} from '../../app.router'
         NavbarComponent,
         SearchComponent,
         PlurialPipe,
-        LocalPipe,
         StartNamePipe
     ],
     //dépendances du module

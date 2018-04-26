@@ -8,12 +8,6 @@
     <option>2</option>
 </select>
 
-<button>{{'REMOVE' | local:lan}}</button>
-
-<select [(ngModel)] = "lan">
-    <option>fr</option>
-    <option>eng</option>
-</select>
 
 <app-search [username]="name" (onSearch)="changeUsername($event)"></app-search>
 

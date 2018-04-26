@@ -1,19 +1,31 @@
 import {Injectable} from '@angular/core'
-import {Http} from '@angular/http'
+import {HttpClient} from '@angular/common/http'
 
 import 'rxjs/add/operator/map'
 
 @Injectable()
 export class UserService {
 
-    constructor(private http:Http){}
+    uri: string ='https://jsonplaceholder.typicode.com/users'
+    constructor(private http:HttpClient){}
 
     fetch() {
-        return this.http
-            .get('https://jsonplaceholder.typicode.com/users')
-            .map(res => res.json())
-            /* .subscribe((users) => {
-                console.log(users)
-            }) */
+        return new Promise((resolve, reject) => {
+            this.http
+                .get(this.uri)
+                .subscribe((users) => {
+                    resolve(users)
+                }, (err) => {
+                    reject(err)
+                })
+        })
+    }
+
+    create(data: any) {
+        return this.http.post(this.uri, data)
+    }
+
+    delete(id: number) {
+        return this.http.delete(`${this.uri}/${id}`)
     }
 }
