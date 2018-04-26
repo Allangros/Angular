@@ -54,4 +54,24 @@ Car c'est une application "single page"
 On met app-router à la racine du tempalte app.component.ts car c'est lui que se charge d'afficher le reste
 
 
-Injection de dépendences : creer une nouvelle class (core/app-service) et l'appeler dans le constructeur du component voulu (ici navbar.componen)
+Injection de dépendences : creer une nouvelle class (core/app-service) et l'appeler dans le constructeur du component voulu (ici navbar.componen) Voir également ngOnInit
+
+
+app.component.ts
+
+import 
+export class AppComment {
+	constructor(private tplCLick: TplClick) {
+		tplCLick
+			.simulate()
+			.buffertime(1500)
+			.map(item => item.length
+			.subscribe((nb: number => {
+				console.log(nb)
+			}, (err) => {
+				console.log(err)
+			}, () => {
+				console.log('terminé')
+				}
+	}
+}

@@ -10,11 +10,13 @@ import {UserService} from '../../core/users.service'
 export class UsersComponent implements OnInit{
     extSelected: string ="me"
     ext: string[] = ['tv', 'biz', 'io', 'me']
-    users: any
+    users: any = []
 
     constructor(private userModel:UserService){}
 
     ngOnInit(){
-      this.users = this.userModel.fetch()
+      this.userModel.fetch().subscribe((users) => {
+          this.users = users
+      })
     }
 }
