@@ -4,9 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root', //cf index.html
   //templateUrl: './app.component.html',
   template: `
-  <app-navbar></app-navbar>
-  <h1>App</h1>
-  <userslist></userslist>
+  <router-outlet></router-outlet>
   `
 })
 export class AppComponent {
