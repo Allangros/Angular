@@ -1,0 +1,52 @@
+Formation Angular
+
+Composants :
+
+le composant racine se nomme AppComponent
+un sous composant peut être la balise nav ou body i.e
+
+Modules :
+
+Conteneur ==> composants/Services etc
+Ils sont indépendants les uns des autres
+
+Un composant est toujours relié à un module (enveloppe lettre par exemple)
+
+app.module.ts :
+
+Il faut déclarer notr class en tant que module, on import NgModule de angular/core
+
+déclaration indique quels sont les composants qui contient mon module
+imports indique les autres modules importés dans mon module
+
+Il faut donc créer mon composant : app.component.ts
+
+On export la class du component avec export et on l'importe dans le module avec import, et que l'on met dans le tableau déclaration du @NgModule
+on le met également dans le tableau bootstrap car il correspond au composant de démarrage
+
+main.ts permet de dire sur quel module démarrer, et sur quelle plateforme (mobile etc)
+
+On créer un nouveau module navbar ainsi que son composant
+qu'il va falloir lier entre eux puis a app.module
+
+
+Avec les crochets (à value par exemple) on peut donner une valeur dynamique en entrée
+
+Avec les parentheses on peut donnée une valeur en sortie (voir le clique sur le bouton recherche
+
+Input avec crochets On écoute
+Ouput avec parenthese On emet
+
+En utilisant on peut récupérer le username 
+
+Pour avoir une synchronisation entre la propriété et le le champ il faut utiliser FormsModule
+
+Directive structurelle ==> *ngIf
+
+
+
+Routeur
+
+selon l'url (i.e /login) angular se charge de lire l'url et déterminer vers quelle vue rediriger l'user.
+C'est lui qui fait le routage et il affiche le composant correspondant.
+Car c'est une application "single page"
