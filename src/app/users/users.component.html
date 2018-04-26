@@ -1,8 +1,7 @@
+Extension : 
+
 <select [(ngModel)] = "extSelected">
-    <option>tv</option>
-    <option>biz</option>
-    <option>me</option>
-    <option>io</option>
+    <option *ngFor="let ex of ext">{{ex}}</option>
 </select>
 
 <user-card *ngFor="let user of users | mailPipe:extSelected" [user]="user"></user-card>

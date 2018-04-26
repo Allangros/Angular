@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
     templateUrl: 'users.component.html'
 })
 export class UsersComponent {
-    //ext: string[] = ['tv', 'biz', 'io', 'me']
+    extSelected: string ="me"
+    ext: string[] = ['tv', 'biz', 'io', 'me']
     users: any =     [
         {
           "id": 1,
