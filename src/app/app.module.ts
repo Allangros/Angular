@@ -4,6 +4,7 @@ import {AppComponent} from './app.component'
 import {LoginModule} from './login/login.module'
 import {AppRouter} from './app.router'
 import {LayoutModule} from './layout/layout.module'
+import {AppService} from './core/app.service'
 
 @NgModule({
     //composant dans le module
@@ -16,7 +17,8 @@ import {LayoutModule} from './layout/layout.module'
         LayoutModule
     ],
     //sur quel composant démarrer
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    providers: [AppService]
 })
 export class AppModule {
 }
