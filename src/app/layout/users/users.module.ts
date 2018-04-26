@@ -5,6 +5,7 @@ import {UsersComponent} from './users.component'
 import {UserCardComponent} from './user-card/user-card.component'
 import {MatListModule} from '@angular/material'
 import {MailPipe} from '../../shared/pipes/mail.pipes'
+import {UserService} from '../../core/users.service'
 
 @NgModule({
     //composant dans le module, ici composants privés du module
@@ -12,6 +13,7 @@ import {MailPipe} from '../../shared/pipes/mail.pipes'
     //dépendances du module
     imports: [MatListModule,CommonModule,FormsModule],
     //pas de boostrap car ce n'est plus le module racine, ici composant public
-    exports: [UsersComponent]
+    exports: [UsersComponent],
+    providers :[UserService]
 })
 export class UsersModule {}

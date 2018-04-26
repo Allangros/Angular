@@ -5,6 +5,8 @@ import {LoginModule} from './login/login.module'
 import {AppRouter} from './app.router'
 import {LayoutModule} from './layout/layout.module'
 import {AppService} from './core/app.service'
+import {UserService} from './core/users.service'
+import {HttpModule} from '@angular/http'
 
 @NgModule({
     //composant dans le module
@@ -14,11 +16,12 @@ import {AppService} from './core/app.service'
         BrowserModule, 
         LoginModule,
         AppRouter,
-        LayoutModule
+        LayoutModule,
+        HttpModule
     ],
     //sur quel composant démarrer
     bootstrap: [AppComponent],
-    providers: [AppService]
+    providers: [AppService,UserService]
 })
 export class AppModule {
 }
