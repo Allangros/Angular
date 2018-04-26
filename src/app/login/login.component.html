@@ -1,1 +1,17 @@
-<h1>Login</h1>
+<form (ngSubmit)="send()" [formGroup]="myform">
+
+    <div *ngIf="propEmail.hasError('required')">
+        Email requis
+    </div>
+    <div *ngIf="propEmail.hasError('minlength')">
+            3. carac. min.
+    </div>
+    <div *ngIf="propEmail.hasError('letter')">
+                commence par un z
+    </div>
+
+    Email : <input type="text" [formControl]="propEmail">
+    PWD : <input type="text" [formControl]="propPassword">
+
+    <button type="submit">Valider</button>
+</form>
