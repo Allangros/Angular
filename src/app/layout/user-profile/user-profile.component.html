@@ -1,3 +1,17 @@
-<p>
-  user-profile works!
-</p>
+<h1>{{user.name}}</h1>
+
+<form (ngSubmit)="send()" [formGroup]="modifyform">
+
+    <div *ngIf="usermail.hasError('email')">
+        necessite @
+    </div>
+    <div *ngIf="usermail.hasError('uniqEmail')">
+        email non unique
+    </div>
+
+    Name : <input type="text" [formControl]="name">
+    Email : <input type="text" [formControl]="usermail">
+    UserName : <input type="text" [formControl]="username">
+
+    <button type="submit">Valider</button>
+</form>

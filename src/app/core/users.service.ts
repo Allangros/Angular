@@ -28,4 +28,8 @@ export class UserService {
     delete(id: number) {
         return this.http.delete(`${this.uri}/${id}`)
     }
+
+    getUserById(id: number){
+        return this.http.get(`${this.uri}/${id}`)
+    }
 }
