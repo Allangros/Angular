@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core'
 import { FormGroup, FormControl } from '@angular/forms';
+import { UserService } from '../../../core/users.service';
 
 @Component ({
     selector: 'app-search',
@@ -23,6 +24,7 @@ export class SearchComponent{
 
     myform: FormGroup
     searchField: FormControl 
+    constructor(private userModel: UserService){}
 
     search() {
         //Au clique on emet un evenement
@@ -32,7 +34,7 @@ export class SearchComponent{
     ngOnInit() {
         this.searchField = new FormControl
         this.searchField.valueChanges.subscribe((str:string) => {
-            console.log(str)
+            this.userModel.ob.next(str)
         })
         this.myform = new FormGroup({
             search: this.searchField

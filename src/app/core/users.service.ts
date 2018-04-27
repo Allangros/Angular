@@ -2,12 +2,18 @@ import {Injectable} from '@angular/core'
 import {HttpClient} from '@angular/common/http'
 
 import 'rxjs/add/operator/map'
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class UserService {
 
     uri: string ='https://jsonplaceholder.typicode.com/users'
-    constructor(private http:HttpClient){}
+
+    ob: BehaviorSubject<any> = new BehaviorSubject(undefined)
+
+    constructor(private http:HttpClient){
+        
+    }
 
     fetch() {
         return new Promise((resolve, reject) => {

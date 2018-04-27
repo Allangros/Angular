@@ -18,6 +18,9 @@ export class UsersComponent implements OnInit{
       this.userModel.fetch().then((users) => {
           this.users = users
       })
+      this.userModel.ob.subscribe((str) => {
+          console.log(str)
+      })
     }
 
     createUser(){
