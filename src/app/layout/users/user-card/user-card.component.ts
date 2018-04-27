@@ -11,7 +11,7 @@ import {UserService} from '../../../core/users.service'
         <option>eng</option>
     </select>
     <button (click)=deleteUser()>{{'REMOVE' | local:lan}}</button>
-    <button [routerLink]="['user', 'user.id']">Modifier</button>
+    <button [routerLink]="['user', user.id]">Modifier</button>
     `
 })
 export class UserCardComponent{
