@@ -11,7 +11,7 @@ export class ConfirmDirective {
 
     @HostListener('click')
     openDialog() {
-        const bool = window.confirm(this.message + ' -- ' + this.confirmUsername)
+        const bool = window.confirm(this.message + ' ' + this.confirmUsername)
         if (bool) {
             this.onConfirm.emit()
         }
