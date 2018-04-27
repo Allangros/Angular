@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter} from '@angular/core'
+import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core'
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component ({
     selector: 'app-search',
@@ -19,8 +20,22 @@ export class SearchComponent{
     @Input() username: string
     @Output() onSearch: EventEmitter<String> = new EventEmitter()
     names: Array<string> =['Jim','JO','BOB', 'ana']
-    search(ev:any) {
+
+    myform: FormGroup
+    searchField: FormControl 
+
+    search() {
         //Au clique on emet un evenement
         this.onSearch.emit(this.username)
+    }
+
+    ngOnInit() {
+        this.searchField = new FormControl
+        this.searchField.valueChanges.subscribe((str:string) => {
+            console.log(str)
+        })
+        this.myform = new FormGroup({
+            search: this.searchField
+        })
     }
 }

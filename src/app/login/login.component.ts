@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit{
         this.propEmail = new FormControl('', [
             Validators.required,
             Validators.minLength(3),
-            letterValidator(this.lettre)
+            letterValidator()
         ])
         this.propPassword = new FormControl('', [])
         this.myform = this.builder.group({

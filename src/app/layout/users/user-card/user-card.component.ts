@@ -10,7 +10,7 @@ import {UserService} from '../../../core/users.service'
         <option>fr</option>
         <option>eng</option>
     </select>
-    <button (click)=deleteUser()>{{'REMOVE' | local:lan}}</button>
+    <button (onConfirm)=deleteUser() confirm="Etes-vous sûr ?" [confirmUsername]="user.name">{{'REMOVE' | local:lan}}</button>
     <button [routerLink]="['user', user.id]">Modifier</button>
     `
 })

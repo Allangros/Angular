@@ -72,6 +72,6 @@ export class AppComment {
 				console.log(err)
 			}, () => {
 				console.log('terminé')
-				}
+			}
 	}
 }

@@ -7,6 +7,14 @@
     </li>
 </ul> -->
 
+
+<form [formGroup]="myform">
+    <input type="text" [formControl]="searchField"]>
+</form>
+
+<button (click)="search()" *ngIf="username">Chercher</button>
+
+
 <ul>
     <li *ngFor="let name of names | startname ; let i =index ; let isEven = even"
     [ngStyle]="{color: 'red', 'font-weight':'bold'}">
