@@ -4,7 +4,7 @@ import {Component} from '@angular/core'
     selector: 'app-layout',
     template: `
         <app-navbar></app-navbar>
-        <userslist></userslist>
+        <router-outlet></router-outlet>
     `
 })
 export class LayoutComponent {}

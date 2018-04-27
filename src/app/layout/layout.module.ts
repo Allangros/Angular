@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common'
 import {NavbarModule} from './navbar/navbar.module'
 import {UsersModule} from './users/users.module'
 import {LayoutComponent} from './layout.component'
+import {UserProfileModule} from './user-profile/user-profile.module'
+import {LayoutRouter} from './layout.router'
 
 @NgModule({
     declarations: [
@@ -12,7 +14,9 @@ import {LayoutComponent} from './layout.component'
     imports: [
         CommonModule,
         NavbarModule,
-        UsersModule
+        UsersModule,
+        UserProfileModule,
+        LayoutRouter
     ],
 })
 export class LayoutModule{}

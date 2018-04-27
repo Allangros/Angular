@@ -7,6 +7,7 @@ import {LayoutModule} from './layout/layout.module'
 import {AppService} from './core/app.service'
 import {UserService} from './core/users.service'
 import {HttpClientModule} from '@angular/common/http'
+import {LayoutRouter} from './layout/layout.router'
 
 @NgModule({
     //composant dans le module
@@ -17,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http'
         LoginModule,
         AppRouter,
         LayoutModule,
-        HttpClientModule
+        HttpClientModule,
+        LayoutRouter
     ],
     //sur quel composant démarrer
     bootstrap: [AppComponent],

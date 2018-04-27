@@ -4,10 +4,7 @@ import {LoginComponent} from './login/login.component'
 
 
 const routes:any = [
-    {
-        path:'',
-        component: LayoutComponent
-    },
+
     {
         path: 'login',
         component: LoginComponent
